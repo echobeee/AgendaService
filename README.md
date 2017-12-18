@@ -103,4 +103,4 @@ README-yourid.md
 
 已登录用户清空自己发起的所有会议。
 
-![](https://raw.githubusercontent.com/moandy/cloudgo/67124ed6590af80f3c969706eb6e2483a6760a09/picture/p1.png)
+
