@@ -67,23 +67,15 @@ Available Commands:
 
 >agenda login -uUserName --password pass
 
-用户登录,登录成功，返回成功信息，并列出可选操作。
+用户登录
 
 >agenda logout
 
-用户退出登录，返回成功信息并列出可选操作。
-
->agenda -lUser
-
-已登录用户查询已注册用户信息（用户名、邮箱、电话）
+用户退出登录
 
 >agenda delete
 
 已登录用户注销帐号
-
->agenda mkmeeting --title Name --participator user1 [user2 ....] --stime start --etime end
-
-成功，则返回成功信息及注册信息
 
 >agenda meetingadd --participator user1 [user2 ...]
 
@@ -97,13 +89,9 @@ Available Commands:
 
 已登录用户查询自己的会议议程。
 
->agenda meetingdel --title Name
-
-已登录用户删除会议。
-
 >agenda meetingout --ttile Name
 
-已登录用户退出自己参与的某一会议，若因此造成会议参与者为0,则会议被删除。
+已登录用户退出自己参与的某一会议
 
 >agenda meetingclear
 
@@ -111,3 +99,4 @@ Available Commands:
 
 ![](https://github.com/echobeee/AgendaService/blob/master/pic/1.png)
 ![](https://github.com/echobeee/AgendaService/blob/master/pic/2.png)
+![](https://github.com/echobeee/AgendaService/blob/master/pic/3.png)
