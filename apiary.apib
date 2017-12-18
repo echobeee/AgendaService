@@ -1,0 +1,129 @@
+FORMAT: 1A
+
+# Agenda
+
+Agenda is a local cli program allowing you to schedule your meetings online on our server.
+
+# Group User
+
+## User [/v1/user]
+
+### UserRegister [POST]
+
+Register a new user: "register -u [UserName] -p [Pass] -e [Email] -t [Phone]"
+
++ Request (application/json)
+
+        {
+            "username":"li4",
+            "password":"123",
+            "email":"li4@163.com",
+            "phone":"123"
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "id":1,
+                "key":"9f9d51bc70ef21ca5c14f307980a29d8",
+                "username":"li4",
+                "password":"123",
+                "email":"li4@163.com",
+                "phone":"123"
+            }
+            
+### UserDelete [DELETE]
+
+To delete your account in Agenda: "delete"
+
++ Response 204
+
+## Users [/v1/users]
+
+### ListALLUsers [GET]
+
+Show all users: "users"
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id":1,
+                "key": "******",
+                "username":"zhang3",
+                "password":"******",
+                "email":"zhang3@163.com",
+                "phone":"123"
+            }, {
+                "id":2,
+                "key": "******",
+                "username":"li4",
+                "password":"******",
+                "email":"li4@163.com",
+                "phone":"123"
+            }
+        ]
+
+
+# Group Meeting
+
+## Meeting [/v1/meeting]
+
+### MeetingCreate [POST]
+
+
+To create a new meeting:  "create -t [Title] -p [Participator] -s [StartTime] -e [EndTime]"
+
++ Request (application/json)
+
+        {
+            "title":"Meeting-three",
+            "members":["li4"],
+            "starttime":"2004/01/01/00:00",
+            "endtime":"2005/01/01/00:00"
+        }
+
++ Response 201 (application/json)
+
+    + Body
+
+            {
+                "id": 3,
+                "title":"Meeting-three",
+                "host":"zhang3",
+                "members":["li4"],
+                "starttime":"2004/01/01/00:00",
+                "endtime":"2005/01/01/00:00"
+            }
+            
+
+## Meetings [/v1/meetings]
+
+### ListAllMeetings [GET]
+
+Show all meetings: "meetings"
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id":1,
+                "title":"Meeting-one",
+                "host":"zhang3",
+                "members":["li4"],
+                "starttime":"2000/01/01/00:00",
+                "endtime":"2001/01/01/00:00"
+            },{
+                "id":2,
+                "title":"Meeting-two",
+                "host":"li4",
+                "members":["zhang3", "wang5"],
+                "starttime":"2002/01/01/00:00",
+                "endtime":"2003/01/01/00:00"
+            }
+        ]
+
+
+
