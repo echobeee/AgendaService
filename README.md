@@ -95,7 +95,7 @@ Available Commands:
 
 >agenda meetingclear
 
-已登录用户清空自己发起的所有会议。
+用户清空自己发起的会议。
 
 ![](https://github.com/echobeee/AgendaService/blob/master/pic/1.png)
 ![](https://github.com/echobeee/AgendaService/blob/master/pic/2.png)
