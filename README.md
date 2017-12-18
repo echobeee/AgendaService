@@ -55,13 +55,19 @@ README-yourid.md
 
 ### 命令实现
 
->agenda register -uUserName --password pass -email=a@xxx.com -phone=phoneNum
+Usage:
+```scripts
+agenda [command]
+```
+Available Commands:
 
-用户注册，如果用户名已被使用，返回错误信息；如果注册成功，返回成功信息。
+>agenda register -uUserName --password pass 
+
+用户注册
 
 >agenda login -uUserName --password pass
 
-用户登录，登录失败返回失败原因;登录成功，返回成功信息，并列出可选操作。
+用户登录,登录成功，返回成功信息，并列出可选操作。
 
 >agenda logout
 
@@ -73,19 +79,19 @@ README-yourid.md
 
 >agenda delete
 
-已登录用户注销帐号，操作成功返回成功信息；否则，返回失败信息。若成功，删除一切与该用户的信息。
+已登录用户注销帐号
 
 >agenda mkmeeting --title Name --participator user1 [user2 ....] --stime start --etime end
 
-成功，则返回成功信息及注册信息；失败，则返回失败原因。
+成功，则返回成功信息及注册信息
 
 >agenda meetingadd --participator user1 [user2 ...]
 
-成功，则返回新增参与者信息；失败，返回失败原因。
+增加会议
 
 > agenda meetingdel --participator user1 [user2 ...]
 
-成功，则返回成功信息（如果会议因为删除参与者而删除，返回额外信息）；失败，返回失败原因。
+删除会议
 
 >agenda querymeeting -stime start -etime end
 
@@ -103,4 +109,6 @@ README-yourid.md
 
 已登录用户清空自己发起的所有会议。
 
-
+![](https://github.com/echobeee/AgendaService/blob/master/pic/1.png)
+![](https://github.com/echobeee/AgendaService/blob/master/pic/2.png)
+![](https://github.com/echobeee/AgendaService/blob/master/pic/3.png)
